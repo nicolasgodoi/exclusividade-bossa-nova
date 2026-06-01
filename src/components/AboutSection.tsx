@@ -28,7 +28,7 @@ export default function AboutSection() {
             zIndex: 0,
           }} />
           <img
-            src="/images/corretor.jpg"
+            src=`${import.meta.env.BASE_URL}images/corretor.jpg`
             alt="Rodolfo Andrade"
             style={{
               position: 'relative', zIndex: 1,
@@ -96,7 +96,7 @@ export default function AboutSection() {
             marginBottom: 18,
             opacity: 0.8,
           }}>
-            Com anos de experiência no mercado imobiliário de alto padrão, Rodolfo Andrade une expertise técnica a um atendimento personalizado e discreto.
+            Com anos de experiÃªncia no mercado imobiliÃ¡rio de alto padrÃ£o, Rodolfo Andrade une expertise tÃ©cnica a um atendimento personalizado e discreto.
           </p>
           <p style={{
             fontFamily: "'Cormorant Garamond', serif",
@@ -105,7 +105,7 @@ export default function AboutSection() {
             marginBottom: 44,
             opacity: 0.5,
           }}>
-            Associado à Bossa Nova Sotheby's International Realty, oferece acesso a um portfólio exclusivo e uma rede global de compradores qualificados.
+            Associado Ã  Bossa Nova Sotheby's International Realty, oferece acesso a um portfÃ³lio exclusivo e uma rede global de compradores qualificados.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 44 }}>
@@ -155,7 +155,7 @@ export default function AboutSection() {
             onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.background = '#2a3f54'}
             onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.background = '#1C2B3A'}
           >
-            Agendar Visita →
+            Agendar Visita â
           </a>
         </div>
       </div>
