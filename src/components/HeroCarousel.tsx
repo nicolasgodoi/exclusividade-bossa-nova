@@ -2,10 +2,10 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const IMAGES = [
-  { src: '/images/IMG_0254.jpg', label: 'Sala de Estar' },
-  { src: '/images/IMG_0267.jpg', label: 'Living Integrado' },
-  { src: '/images/IMG_0232.jpg', label: 'Cozinha Gourmet' },
-  { src: '/images/IMG_0325.jpg', label: 'Suíte Master' },
+  { src: '/exclusividade-bossa-nova/images/IMG_0254.jpg', label: 'Sala de Estar' },
+  { src: '/exclusividade-bossa-nova/images/IMG_0267.jpg', label: 'Living Integrado' },
+  { src: '/exclusividade-bossa-nova/images/IMG_0232.jpg', label: 'Cozinha Gourmet' },
+  { src: '/exclusividade-bossa-nova/images/IMG_0325.jpg', label: 'Suíte Master' },
 ];
 
 export default function HeroCarousel() {
