@@ -28,7 +28,7 @@ export default function AboutSection() {
             zIndex: 0,
           }} />
           <img
-            src="/images/corretor.jpg"
+            src={`${import.meta.env.BASE_URL}images/corretor.jpg`}
             alt="Rodolfo Andrade"
             style={{
               position: 'relative', zIndex: 1,
