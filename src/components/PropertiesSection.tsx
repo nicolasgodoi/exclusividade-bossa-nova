@@ -4,12 +4,12 @@ const ROOMS = [
   { src: '/images/IMG_0254.jpg', label: 'Sala de Estar',    desc: 'Ampla e luminosa com pé direito elevado',        tag: '01' },
   { src: '/images/IMG_0267.jpg', label: 'Living Integrado', desc: 'Integração perfeita com área de jantar e vista',  tag: '02' },
   { src: '/images/IMG_0232.jpg', label: 'Cozinha Gourmet',  desc: 'Eletrodomésticos de última geração integrados',   tag: '03' },
-  { src: '/images/IMG_0325.jpg', label: 'Suíte Master',     desc: 'Revestimentos nobres e iluminação arquitetÃ´nica', tag: '04' },
+  { src: '/images/IMG_0325.jpg', label: 'Suíte Master',     desc: 'Revestimentos nobres e iluminação arquitetônica', tag: '04' },
 ];
 
 const STATS = [
   { val: '4',        label: 'Suítes' },
-  { val: '380 mÂ²',   label: 'Ãrea Ãtil' },
+  { val: '380 m²',   label: 'Área Útil' },
   { val: '4',        label: 'Vagas' },
   { val: 'Premium',  label: 'Acabamento' },
 ];
@@ -47,7 +47,7 @@ export default function PropertiesSection() {
               margin: 0,
             }}>
               Cada Ambiente,<br />
-              <span style={{ fontWeight: 300, fontStyle: 'italic' }}>uma experiÃªncia</span>
+              <span style={{ fontWeight: 300, fontStyle: 'italic' }}>uma experiência</span>
             </h2>
           </div>
           <a href="#contato" style={{
@@ -63,7 +63,7 @@ export default function PropertiesSection() {
             onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.opacity = '1'}
             onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.opacity = '0.5'}
           >
-            Solicitar informações â
+            Solicitar informações →
           </a>
         </div>
 
