@@ -28,7 +28,7 @@ export default function AboutSection() {
             zIndex: 0,
           }} />
           <img
-            src="/images/corretor.jpg"
+            src="/exclusividade-bossa-nova/images/corretor.jpg"
             alt="Rodolfo Andrade"
             style={{
               position: 'relative', zIndex: 1,
