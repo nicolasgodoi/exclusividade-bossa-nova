@@ -2,10 +2,10 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const IMAGES = [
-  { src: `${import.meta.env.BASE_URL}images/IMG_0254.jpg`, label: 'Sala de Estar' },
-  { src: `${import.meta.env.BASE_URL}images/IMG_0267.jpg`, label: 'Living Integrado' },
-  { src: `${import.meta.env.BASE_URL}images/IMG_0232.jpg`, label: 'Cozinha Gourmet' },
-  { src: `${import.meta.env.BASE_URL}images/IMG_0325.jpg`, label: 'SuÃÂÃÂÃÂÃÂ­te Master' },
+  { src: '/images/IMG_0254.jpg', label: 'Sala de Estar' },
+  { src: '/images/IMG_0267.jpg', label: 'Living Integrado' },
+  { src: '/images/IMG_0232.jpg', label: 'Cozinha Gourmet' },
+  { src: '/images/IMG_0325.jpg', label: 'Suíte Master' },
 ];
 
 export default function HeroCarousel() {
@@ -85,14 +85,14 @@ export default function HeroCarousel() {
     <div style={{ background: '#1C2B3A', position: 'relative', width: '100%', overflow: 'hidden' }}>
       <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
 
-        {/* Subtle top fog ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ blends into white sections below */}
+        {/* Subtle top fog — blends into white sections below */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0, height: 120,
           background: 'linear-gradient(rgba(28,43,58,0.6), transparent)',
           pointerEvents: 'none', zIndex: 6,
         }} />
 
-        {/* Bottom fade ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ transitions to white */}
+        {/* Bottom fade — transitions to white */}
         <div style={{
           position: 'absolute', bottom: 0, left: 0, right: 0, height: '30%',
           background: 'linear-gradient(transparent, #1C2B3A)',
@@ -140,10 +140,10 @@ export default function HeroCarousel() {
             </span>
           </div>
 
-          {/* Nav links ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ desktop only */}
+          {/* Nav links — desktop only */}
           {!isMobile && (
             <div style={{ display: 'flex', gap: 36 }}>
-              {[['#detalhes', 'O ImÃÂÃÂÃÂÃÂ³vel'], ['#localizacao', 'LocalizaÃÂÃÂÃÂÃÂ§ÃÂÃÂÃÂÃÂ£o'], ['#sobre', 'Corretor'], ['#contato', 'Contato']].map(([href, label]) => (
+              {[['#detalhes', 'O Imóvel'], ['#localizacao', 'Localização'], ['#sobre', 'Corretor'], ['#contato', 'Contato']].map(([href, label]) => (
                 <a key={href} href={href} style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: 10, fontWeight: 600, textTransform: 'uppercase',
@@ -165,7 +165,7 @@ export default function HeroCarousel() {
             fontSize: 10, fontWeight: 500,
             color: 'rgba(255,255,255,0.45)', letterSpacing: '0.14em',
           }}>
-            {String(activeIndex + 1).padStart(2, '0')} ÃÂÃÂÃÂÃÂ· {String(IMAGES.length).padStart(2, '0')}
+            {String(activeIndex + 1).padStart(2, '0')} · {String(IMAGES.length).padStart(2, '0')}
           </span>
         </nav>
 
@@ -199,7 +199,7 @@ export default function HeroCarousel() {
               color: 'rgba(255,255,255,0.45)',
               marginBottom: 10,
             }}>
-              Bossa Nova Sotheby's ÃÂÃÂÃÂÃÂ· ImÃÂÃÂÃÂÃÂ³vel de Alto PadrÃÂÃÂÃÂÃÂ£o
+              Bossa Nova Sotheby's · Imóvel de Alto Padrão
             </p>
             <p style={{
               fontFamily: "'Cormorant Garamond', serif",
@@ -216,7 +216,7 @@ export default function HeroCarousel() {
                 <button
                   key={dir}
                   onClick={() => navigate(dir)}
-                  aria-label={dir === 'prev' ? 'Anterior' : 'PrÃÂÃÂÃÂÃÂ³ximo'}
+                  aria-label={dir === 'prev' ? 'Anterior' : 'Próximo'}
                   style={{
                     width: isMobile ? 40 : 48, height: isMobile ? 40 : 48,
                     borderRadius: '50%',
