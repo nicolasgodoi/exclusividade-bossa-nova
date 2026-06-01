@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 const ROOMS = [
-  { src: `${import.meta.env.BASE_URL}images/IMG_0254.jpg`, label: 'Sala de Estar',    desc: 'Ampla e luminosa com pé direito elevado',        tag: '01' },
-  { src: `${import.meta.env.BASE_URL}images/IMG_0267.jpg`, label: 'Living Integrado', desc: 'Integração perfeita com área de jantar e vista',  tag: '02' },
-  { src: `${import.meta.env.BASE_URL}images/IMG_0232.jpg`, label: 'Cozinha Gourmet',  desc: 'Eletrodomésticos de última geração integrados',   tag: '03' },
-  { src: `${import.meta.env.BASE_URL}images/IMG_0325.jpg`, label: 'Suíte Master',     desc: 'Revestimentos nobres e iluminação arquitetônica', tag: '04' },
+  { src: '/images/IMG_0254.jpg', label: 'Sala de Estar',    desc: 'Ampla e luminosa com pé direito elevado',        tag: '01' },
+  { src: '/images/IMG_0267.jpg', label: 'Living Integrado', desc: 'Integração perfeita com área de jantar e vista',  tag: '02' },
+  { src: '/images/IMG_0232.jpg', label: 'Cozinha Gourmet',  desc: 'Eletrodomésticos de última geração integrados',   tag: '03' },
+  { src: '/images/IMG_0325.jpg', label: 'Suíte Master',     desc: 'Revestimentos nobres e iluminação arquitetônica', tag: '04' },
 ];
 
 const STATS = [
