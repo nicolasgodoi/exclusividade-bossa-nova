@@ -1,10 +1,10 @@
 const PONTOS = [
-  { label: 'MetrÃ´ Consolação',   dist: '400m',  icon: 'ð' },
-  { label: 'Avenida Paulista',    dist: '500m',  icon: 'ð' },
-  { label: 'Parque Trianon',      dist: '600m',  icon: 'ð¿' },
-  { label: 'Shopping Paulista',   dist: '700m',  icon: 'ð' },
-  { label: 'MASP',               dist: '800m',  icon: 'ð¨' },
-  { label: 'Aeroporto Congonhas', dist: '8 km',  icon: 'âï¸' },
+  { label: 'Metrô Consolação',   dist: '400m',  icon: '🚇' },
+  { label: 'Avenida Paulista',    dist: '500m',  icon: '🏙' },
+  { label: 'Parque Trianon',      dist: '600m',  icon: '🌿' },
+  { label: 'Shopping Paulista',   dist: '700m',  icon: '🛍' },
+  { label: 'MASP',               dist: '800m',  icon: '🎨' },
+  { label: 'Aeroporto Congonhas', dist: '8 km',  icon: '✈️' },
 ];
 
 export default function LocationSection() {
@@ -46,7 +46,7 @@ export default function LocationSection() {
             fontSize: 11, color: '#1C2B3A55',
             letterSpacing: '0.08em',
           }}>
-            Jardim América Â· São Paulo, SP Â· Próximo Ã  Av. Paulista
+            Jardim América · São Paulo, SP · Próximo à Av. Paulista
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function LocationSection() {
                 textTransform: 'uppercase', letterSpacing: '0.2em',
                 color: 'rgba(255,255,255,0.8)',
               }}>
-                Cerqueira César Â· Jardim América
+                Cerqueira César · Jardim América
               </span>
             </div>
 
@@ -170,7 +170,7 @@ export default function LocationSection() {
                 color: 'rgba(255,255,255,0.45)',
                 fontStyle: 'italic',
               }}>
-                "Cerqueira César é o coração cultural e financeiro de São Paulo â um endereço que combina sofisticação, conveniÃªncia e qualidade de vida incomparáveis."
+                "Cerqueira César é o coração cultural e financeiro de São Paulo — um endereço que combina sofisticação, conveniência e qualidade de vida incomparáveis."
               </p>
             </div>
           </div>
