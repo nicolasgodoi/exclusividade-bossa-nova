@@ -127,7 +127,7 @@ export default function ContactSection() {
           {sent ? (
             <div style={{ paddingTop: 60, textAlign: 'center' }}>
               <div style={{ width: 48, height: 48, border: '1px solid #1C2B3A22', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
-                <span style={{ fontSize: 20 }}>✓</span>
+                <span style={{ fontSize: 20 }}>â</span>
               </div>
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 30, color: '#1C2B3A', marginBottom: 12 }}>
                 Mensagem Enviada
@@ -189,7 +189,7 @@ export default function ContactSection() {
                   (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(0)';
                 }}
               >
-                Enviar Mensagem →
+                Enviar Mensagem â
               </button>
             </form>
           )}
@@ -208,7 +208,7 @@ export default function ContactSection() {
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: 15, color: '#1C2B3A', opacity: 0.3,
         }}>
-          © 2024 Rodolfo Andrade · Bossa Nova Sotheby's International Realty
+          Â© 2024 Rodolfo Andrade Â· Bossa Nova Sotheby's International Realty
         </p>
         <p style={{
           fontFamily: "'Inter', sans-serif",
@@ -216,7 +216,7 @@ export default function ContactSection() {
           textTransform: 'uppercase', letterSpacing: '0.22em',
           color: '#B8965A', opacity: 0.5,
         }}>
-          CRECI · Alto Padrão
+          CRECI Â· Alto Padrão
         </p>
       </div>
 
