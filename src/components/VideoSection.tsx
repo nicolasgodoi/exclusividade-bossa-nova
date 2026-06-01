@@ -167,7 +167,7 @@ export default function VideoSection() {
         }}>
           <video
             ref={videoRef}
-            src="/images/video.mp4"
+            src="/exclusividade-bossa-nova/images/video.mp4"
             loop
             muted
             playsInline
