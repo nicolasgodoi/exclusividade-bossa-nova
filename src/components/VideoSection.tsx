@@ -167,7 +167,7 @@ export default function VideoSection() {
         }}>
           <video
             ref={videoRef}
-            src={`${import.meta.env.BASE_URL}video.mp4`}
+            src="/images/video.mp4"
             loop
             muted
             playsInline
