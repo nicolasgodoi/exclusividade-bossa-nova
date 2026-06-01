@@ -4,12 +4,12 @@ export default function VideoSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoRef   = useRef<HTMLVideoElement>(null);
 
-  const [progress,  setProgress]  = useState(0);   // 0ÃÂ¢ÃÂÃÂ1
+  const [progress,  setProgress]  = useState(0);   // 0–1
   const [muted,     setMuted]     = useState(true);
   const [playing,   setPlaying]   = useState(false);
   const [entered,   setEntered]   = useState(false);
 
-  /* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ rAF scroll tracker ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+  /* ── rAF scroll tracker ── */
   useEffect(() => {
     let raf = 0;
     const tick = () => {
@@ -17,7 +17,7 @@ export default function VideoSection() {
       if (el) {
         const rect = el.getBoundingClientRect();
         const vh   = window.innerHeight;
-        // 0 when section top enters bottom of screen ÃÂ¢ÃÂÃÂ 1 when section bottom exits top
+        // 0 when section top enters bottom of screen → 1 when section bottom exits top
         const p = 1 - (rect.bottom / (vh + rect.height));
         const clamped = Math.min(1, Math.max(0, p));
         setProgress(clamped);
@@ -30,7 +30,7 @@ export default function VideoSection() {
     return () => cancelAnimationFrame(raf);
   }, [entered]);
 
-  /* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ autoplay when in view ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+  /* ── autoplay when in view ── */
   useEffect(() => {
     if (!entered) return;
     const v = videoRef.current;
@@ -55,14 +55,14 @@ export default function VideoSection() {
     else          { v.pause(); setPlaying(false); }
   };
 
-  /* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Derived values from progress ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+  /* ── Derived values from progress ── */
   // Clip: starts fully closed (inset 50% each side), opens to 0 by progress=0.5
   const clipProgress = Math.min(1, progress / 0.5);
-  const insetH = (1 - clipProgress) * 5;   // horizontal inset % (0ÃÂ¢ÃÂÃÂ5%)
-  const insetV = (1 - clipProgress) * 12;  // vertical inset %   (0ÃÂ¢ÃÂÃÂ12%)
+  const insetH = (1 - clipProgress) * 5;   // horizontal inset % (0–5%)
+  const insetV = (1 - clipProgress) * 12;  // vertical inset %   (0–12%)
   const clip = `inset(${insetV}% ${insetH}% ${insetV}% ${insetH}% round 3px)`;
 
-  // Scale: 0.92 ÃÂ¢ÃÂÃÂ 1.0
+  // Scale: 0.92 → 1.0
   const scale = 0.92 + clipProgress * 0.08;
 
   // Parallax: video drifts up as user scrolls past
@@ -149,11 +149,11 @@ export default function VideoSection() {
             textTransform: 'uppercase', letterSpacing: '0.32em',
             color: '#B8965A',
           }}>
-            Tour pelo ImÃÂÃÂ³vel
+            Tour pelo Imóvel
           </p>
         </div>
 
-        {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Video container ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+        {/* ── Video container ── */}
         <div style={{
           position: 'relative', zIndex: 10,
           width: '90vw', maxWidth: 1160,
@@ -167,7 +167,7 @@ export default function VideoSection() {
         }}>
           <video
             ref={videoRef}
-            src={`${import.meta.env.BASE_URL}video.mp4`}
+            src="/images/video.mp4"
             loop
             muted
             playsInline
@@ -198,7 +198,7 @@ export default function VideoSection() {
             }} />
           ))}
 
-          {/* HUD ÃÂ¢ÃÂÃÂ top left */}
+          {/* HUD — top left */}
           <div style={{
             position: 'absolute', top: 18, left: 18,
             opacity: fade3, transition: 'opacity 500ms',
@@ -210,11 +210,11 @@ export default function VideoSection() {
               color: 'rgba(255,255,255,0.45)', lineHeight: 1.9,
             }}>
               Exclusividade 28778<br />
-              <span style={{ color: '#B8965A' }}>TOUR ÃÂÃÂ· 4K</span>
+              <span style={{ color: '#B8965A' }}>TOUR · 4K</span>
             </p>
           </div>
 
-          {/* Arc progress ÃÂ¢ÃÂÃÂ top right */}
+          {/* Arc progress — top right */}
           <div style={{
             position: 'absolute', top: 14, right: 14,
             opacity: fade3, transition: 'opacity 500ms',
@@ -260,7 +260,7 @@ export default function VideoSection() {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 transition: 'background 150ms',
               }}>
-                {playing ? 'ÃÂ¢ÃÂÃÂ¸' : 'ÃÂ¢ÃÂÃÂ¶'}
+                {playing ? '⏸' : '▶'}
               </button>
               <button onClick={toggleMute} style={{
                 width: 34, height: 34, borderRadius: '50%',
@@ -271,7 +271,7 @@ export default function VideoSection() {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 transition: 'background 150ms',
               }}>
-                {muted ? 'ÃÂ°ÃÂÃÂÃÂ' : 'ÃÂ°ÃÂÃÂÃÂ'}
+                {muted ? '🔇' : '🔊'}
               </button>
               <span style={{
                 fontFamily: "'Inter', sans-serif",
@@ -290,7 +290,7 @@ export default function VideoSection() {
               backdropFilter: 'blur(8px)',
               transition: 'border-color 200ms',
             }}>
-              Agendar Visita ÃÂ¢ÃÂÃÂ
+              Agendar Visita →
             </a>
           </div>
         </div>
@@ -300,7 +300,7 @@ export default function VideoSection() {
           position: 'relative', zIndex: 10,
           textAlign: 'center', marginTop: 32,
           opacity: fade2,
-          transform: `}translateY(${(1 - fade2) * 24}px)`,
+          transform: `translateY(${(1 - fade2) * 24}px)`,
           transition: 'opacity 400ms, transform 400ms',
         }}>
           <h2 style={{
@@ -309,7 +309,7 @@ export default function VideoSection() {
             fontWeight: 600, color: 'white', lineHeight: 1.1,
             letterSpacing: '-0.01em', margin: '0 0 10px',
           }}>
-            Experimente o imÃÂÃÂ³vel{' '}
+            Experimente o imóvel{' '}
             <em style={{ fontWeight: 300 }}>antes da visita</em>
           </h2>
           <p style={{
